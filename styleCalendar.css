@@ -1,0 +1,263 @@
+/*--Author of Task Management System Calendar Page: Tristian Jurgens*/
+
+/*Changed the header and body colors and size to match the others*/
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*the color of the main page, like the background of the calendar*/
+body 
+{
+  font-family: Georgia, serif;
+  background-color: #f9e8e4;
+  color: #2c1f1f;
+}
+
+/*Changes alignment of the navbar and the links */
+nav 
+{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 16px 32px;
+  border-bottom: 1px solid #d4b0aa;
+}
+
+/*This is the task management on the left, no longer a logo */
+.logo 
+{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/*These are the links that makes them have no bullet points and spacing */
+nav ul 
+{
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/*Just color */
+nav ul a 
+{
+  text-decoration: none;
+  color: #6b5050;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/*Hover affect whenever you hightlink a link */
+nav ul a:hover 
+{
+  color: #9a5e5e;
+}
+
+/*This is the left sidebar*/
+aside 
+{
+  width: 340px;
+  float: left;
+  padding: 20px;
+  background: white;
+  height: 100vh;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+/*Input fields, where the user can add tasks. Also has a box-sizing to prevent the text from overflowing*/
+.task-input, select 
+{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/*moved the button for logout*/
+.signup-button
+{
+    background-color: #7174AA;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.signup-button:hover
+{
+    background-color: #5a5d8f;
+}
+
+/*Buttons, choosing size and space*/
+button 
+{
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.secondary 
+{
+  background: #e5e7eb;
+  color: #333;
+}
+
+aside ul 
+{
+  padding: 0;
+  list-style: none;
+}
+
+aside li 
+{
+  background: #eef2ff;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+main 
+{
+  margin-left: 340px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/*Calander header Section*/
+.calendar-header 
+{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header button 
+{
+  width: auto;
+  margin: 0 5px;
+}
+
+/*Table header section*/
+table 
+{
+  width: 750px;
+  border-spacing: 10px;
+}
+
+/*This is for the days of the week, it centers it*/
+th { text-align: center; }
+
+/*Using a table for calendar cells, specifically the days*/
+td 
+{
+  background: white;
+  height: 100px;
+  vertical-align: top;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/*This is to see what day it is and to show which one you selected. The selector is very useful*/
+td.selected { outline: 2px solid #6366f1; }
+td.today { border: 2px solid #22c55e; }
+
+.task 
+{
+  display: block;
+  font-size: 10px;
+  margin-top: 3px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/*New changes for accessibility options*/
+.dyslexia-font 
+{
+    font-family: "OpenDyslexic", Arial, sans-serif;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    line-height: 1.6;
+}
+
+/* */
+#bottomControls 
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
+}
+
+/*switching colors*/
+.high-contrast 
+{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/*switching colors*/
+.high-contrast td 
+{
+    background-color: #111 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+/*You get it */
+.high-contrast .task 
+{
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.high-contrast button 
+{
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #fff;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea 
+{
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff;
+}
+
+/*These are the colors for the statuses. Might change colors.*/
+.todo { background: #fef3c7; }
+.inprogress { background: #dbeafe; }
+.completed { background: #dcfce7; text-decoration: line-through; opacity: 0.7; }
+
+/*References: 
+1. https://www.youtube.com/watch?v=OcncrLyddAs
+2. https://www.youtube.com/watch?v=ZBJ44LrmwDI
+3. https://www.geeksforgeeks.org/web-templates/design-a-calendar-using-html-and-css/ 
+4. https://medium.com/@bijanrai/create-a-calendar-using-html-css-and-javascript-2a35eb7e5f5a
+5. Class notes*/

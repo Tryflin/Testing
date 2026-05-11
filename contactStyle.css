@@ -1,0 +1,207 @@
+/*Author of CSS: Hayden Arceneaux*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: Georgia, serif;
+    background-color: #f9e8e4;
+    color: #2c1f1f;
+}
+
+nav 
+{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 16px 32px;
+    border-bottom: 1px solid #d4b0aa;
+    gap: 16px;
+    border-collapse: collapse;
+}
+
+nav ul 
+{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+
+nav ul a 
+{
+    text-decoration: none;
+    color: #6b5050;
+    font-size: 0.95rem;
+}
+
+nav ul a:hover
+{
+    color: #9a5e5e;
+}
+
+.signup-button
+{
+    background-color: #7174AA;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.signup-button:hover 
+{
+    background-color: #5a5d8f;
+}
+
+.logo 
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+/*Divider*/
+.divider
+{
+    height: 28px;
+    background-color: #AF7474;
+}
+
+
+/*Im gonna have two big sections to the left and right for the info and then the actual form*/
+.contact-section
+{
+    display: flex ;
+    gap: 20px ;
+    width: 90% ;
+    margin: 30px auto ;
+    align-items: stretch ;
+
+    
+}
+
+/*left section*/
+.contact-info
+{
+    display: flex ;
+    flex: 1 ;
+    flex-direction: column;
+    gap: 20px ;
+}
+
+img 
+{
+    margin: auto;
+    width: 100%;
+}
+
+.contact-form
+{
+    display: flex ;
+    flex: 1 ;
+    flex-direction: column;
+    gap: 20px ;
+}
+
+.contact-form h2,
+.contact-info h2
+{
+    text-align: center;
+    font-size: 40px;
+}
+
+.cell
+{
+    border: 3px solid #af7474;
+    border-radius: 10px ;
+    padding: 10px ;
+    background-color: #ffffff;
+}
+
+.cell input,
+.cell select,
+.cell textarea 
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px ;
+    border-radius: 10px;
+    border: 3px solid #af7474;
+    margin-top: 5px ;
+    margin-bottom: 5px ;
+
+    outline: none;
+}
+
+/*I want to try to fit our accent color in a little more but this is the only spot I think I can*/
+.cell input:focus,
+.cell select:focus,
+.cell textarea:focus
+{
+    border: 3px solid #8b73c4 ;
+}
+
+.cell button
+{
+    width: 25%;
+    padding: 10px ;
+    border-radius: 10px ;
+    border: 3px solid #af7474 ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #af7474;
+}
+
+/*Trying to decide on lighter color or accent color for hover*/
+.cell button:hover 
+{
+    /*
+    background-color: #dca6a6;
+    border-color: #dca6a6;
+    */
+
+    background-color: #8b73c4;
+    border-color: #8b73c4;
+
+}
+
+/*wanted custom bullet points and since I don't think I will change the order I'm gonna assign it in an order*/
+/*Could change depending on amount of contact info or maybe ill remove the phone number one*/
+
+/*Had to add ids because the css for the list in nav and this one were conflicting*/
+/*I should have had them associated with ids in the first place I guess*/
+#extraContact {
+    list-style-position: inside;
+}
+#phone::marker
+{
+    /*list-style: disc;*/
+    content: "☎";
+}
+#mail::marker
+{
+    /*list-style-type: disc;*/
+    content: "📧";
+}
+
+/*Although fun to play around with I don't want my text area to be resizable the way it is*/
+textarea {
+    resize: none;
+}
+
+/*when there is an error it should appear in a box or something 
+  insted of just text right next to the field name*/
+.errorNoti 
+{
+    border: 3px solid #af7474;
+    border-radius: 10px ;
+    padding: 10px ;
+    background-color: #af7474;
+}
