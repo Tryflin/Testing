@@ -18,7 +18,7 @@ require_once 'init.php';
     <?php if (isset($_SESSION['user_id'])): ?>
 
         <a href="calendar.php" class="nav-button">
-            User #<?= htmlspecialchars($_SESSION['user_id']) ?>
+            User #<?= htmlspecialchars($_SESSION['userId']) ?>
         </a>
 
     <?php else: ?>
