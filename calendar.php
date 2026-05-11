@@ -1,6 +1,6 @@
 <!--Author of Task Management System Calendar Page: Tristian Jurgens-->
 <?php
-session_start();
+require_once 'init.php';
 require_once 'db.php';
  ?>
 <!DOCTYPE html>
