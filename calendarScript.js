@@ -163,7 +163,7 @@ function addTask()
         priority,
         status,
         date: selected,
-        reminder_time: reminder  
+        reminder_time: reminder || null 
     };
 
     //allows you to add the task to the database//
