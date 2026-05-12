@@ -32,16 +32,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         //if no problems making account
         if($passwordError == "" and $usernameError == ""){
             $passwordHash = password_hash($pass1, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users(NAME, email, password)
-        VALUES (:NAME, :email, :password)";
+            $sql = "INSERT INTO userlogin (username, passHASH, userID)
+        VALUES (:username, :passHASH, :userID)";
 
-            $stmt = $conn->prepare($sql);
+$stmt = $conn->prepare($sql);
 
-            $stmt->execute([
-                ":NAME" => $username,
-                ":email" => $email,
-                ":password" => $passwordHash
-            ]);
+$stmt->execute([
+    ":username" => $username,
+    ":passHASH" => $passwordHash,
+    ":userID" => $user["id"]
+]);
 
             //Second SQL call to get ID
             $sql = "SELECT * FROM users WHERE NAME = :NAME";
