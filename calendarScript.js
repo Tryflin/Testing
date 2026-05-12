@@ -210,6 +210,7 @@ function addTask()
     renderTasks();
     generateCalendar();
 })
+}
 
 //This is to delete tasks from the backend, no longer the just the frontend//
 //changed and deleted the original, changed for id//
