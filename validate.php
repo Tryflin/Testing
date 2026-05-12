@@ -1,8 +1,5 @@
-<!--Author of File: Hayden Arceneaux
-    Purpose: Validate input from forms to either send to db
-             Or advise user to revise inputs-->
-
 <?php
+session_start();
 include 'db.php' ;
 
 //variables need to be declared first because of 
