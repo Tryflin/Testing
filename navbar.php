@@ -36,7 +36,4 @@
         <a href="signup.php" class="nav-button">Get Started</a>
     
     <?php endif; ?>
-    <pre>
-<?php print_r($_SESSION); ?>
-</pre>
 </nav>
