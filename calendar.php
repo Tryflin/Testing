@@ -1,6 +1,6 @@
 <!--Author of Task Management System Calendar Page: Tristian Jurgens-->
 <?php
-require_once 'init.php';
+session_start();
 require_once 'db.php';
  ?>
 <!DOCTYPE html>
@@ -104,7 +104,6 @@ require_once 'db.php';
         </main>
         <!--Link to JavaScript-->
         <script>
-            const userID = <?php echo json_encode($_SESSION['userID'] ?? null); ?>;
 
             console.log("Logged in as user:", userID);
 
