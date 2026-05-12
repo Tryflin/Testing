@@ -103,14 +103,7 @@ require_once 'db.php';
                 </table>
             </section>
         </main>
-        <!--Link to JavaScript-->
-        <script>
-
-
-    if (!window.userID || window.userID === 0) {
-        console.error("No logged in user found.");
-    }
-</script>
+        
         
     </body>
 </html>
