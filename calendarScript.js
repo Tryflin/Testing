@@ -34,7 +34,8 @@ fetch("getUser.php")
         currentUserId = data.userID;
         console.log("Logged in as user:", currentUserId);
 
-        loadTasksFromDB(); 
+        loadTasksFromDB();
+        generateCalendar();
     })
     .catch(err => console.error("User session error:", err));
 
@@ -485,11 +486,7 @@ function toggleHighContrast()
     localStorage.setItem("highContrastMode", highContrastMode);
 }
 
-//makes sure order is good//
-document.addEventListener("DOMContentLoaded", () => 
-{
-    generateCalendar();
-});
+
 
 
 //Refrences for JS (I had to learn a lot, and a lot of code is learned from these sources): 
