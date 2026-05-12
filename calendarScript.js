@@ -32,6 +32,8 @@ fetch("getUser.php")
         }
 
         currentUserId = data.userID;
+        userReady = true;
+
         console.log("Logged in as user:", currentUserId);
 
         loadTasksFromDB(); 
@@ -156,7 +158,7 @@ function addTask()
     //new stuff to add it to the SQL, must match what is in the SQL, otherwise doesnt save//
     const data = 
     {
-        userID: currentUserId,
+        userID: window.userID,
         title,
         description: desc,
         priority,
