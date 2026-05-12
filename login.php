@@ -7,9 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST['user'] ?? '';
     $password = $_POST['pass'] ?? '';
 
-    $sql = "SELECT userID, passHASH FROM users WHERE username = :username";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([':username' => $username]);
+    $sql = "SELECT userID, passHASH FROM userlogin WHERE username = :username";
+$stmt = $conn->prepare($sql);
+$stmt->execute([':username' => $username]);
+
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
