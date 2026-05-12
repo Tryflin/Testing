@@ -6,7 +6,7 @@ require_once 'db.php';
 ?>
 
 <html lang="en">
-    <script src="calendarScript.js"></script>
+    
     <!-- Header -->
     <head>
         <meta name="author" content="Tristian" />
@@ -32,6 +32,7 @@ require_once 'db.php';
         <button onclick="toggleHighContrast()">High Contrast</button>
     </div>
 
+    <script src="calendarScript.js"></script>
     <!-- Body -->
     <body>
 
