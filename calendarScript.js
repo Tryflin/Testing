@@ -32,21 +32,11 @@ fetch("getUser.php")
         }
 
         currentUserId = data.userID;
-        userReady = true;
-
         console.log("Logged in as user:", currentUserId);
 
         loadTasksFromDB(); 
     })
     .catch(err => console.error("User session error:", err));
-
-if (!currentUserId) {
-    alert("You are not logged in");
-    window.location.href = "login.php";
-} else {
-    console.log("Logged in as user:", currentUserId);
-    loadTasksFromDB();
-}
 
 
 //Date key, changed again because of database//
@@ -166,7 +156,7 @@ function addTask()
     //new stuff to add it to the SQL, must match what is in the SQL, otherwise doesnt save//
     const data = 
     {
-        userID: window.userID,
+        userID: currentUserId,
         title,
         description: desc,
         priority,
