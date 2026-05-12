@@ -1,7 +1,7 @@
 <!--Author of Task Management System About Page: Ben Phan
     Navbar split into smaller file  -->
 <?php
-require_once 'init.php';
+session_start();
 ?>
 
 <link rel="stylesheet" href="global.css">
