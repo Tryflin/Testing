@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" ) {
                 //         ") ;
                 //     }
                 $stmt = $conn->prepare("
-                    INSERT INTO Forms (ClientName, ClientEmail, Reason, CustomReason, ClientConcern)
+                    INSERT INTO forms (ClientName, ClientEmail, Reason, CustomReason, ClientConcern)
                     VALUES (:name, :email, :reason, :custom, :comment)
                 ") ;
 
