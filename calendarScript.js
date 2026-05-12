@@ -20,7 +20,25 @@ const months =
 ];
 
 //Must login before being able to load the calendar, as loading it beforehand does not work well//
-currentUserId = window.userID;
+fetch("getUser.php")
+    .then(res => res.json())
+    .then(data => 
+    {
+        if (!data.loggedIn) 
+        {
+            alert("You are not logged in");
+            window.location.href = "login.php";
+            return;
+        }
+
+        currentUserId = data.userID;
+        userReady = true;
+
+        console.log("Logged in as user:", currentUserId);
+
+        loadTasksFromDB(); 
+    })
+    .catch(err => console.error("User session error:", err));
 
 if (!currentUserId) {
     alert("You are not logged in");
