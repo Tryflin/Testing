@@ -6,7 +6,7 @@ require_once 'db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+    <script src="calendarScript.js"></script>
     <!-- Header -->
     <head>
         <meta name="author" content="Tristian" />
@@ -111,7 +111,7 @@ require_once 'db.php';
         console.error("No logged in user found.");
     }
 </script>
-        <script src="calendarScript.js"></script>
+        
     </body>
 </html>
 
