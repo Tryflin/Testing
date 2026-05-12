@@ -15,10 +15,10 @@ require_once 'init.php';
         <li><a href="contact.php">Contact</a></li>
     </ul>
 
-    <?php if (isset($_SESSION['user_id'])): ?>
+    <?php if (isset($_SESSION['userID'])): ?>
 
         <a href="calendar.php" class="nav-button">
-            User #<?= htmlspecialchars($_SESSION['userId']) ?>
+            User #<?= htmlspecialchars($_SESSION['userID']) ?>
         </a>
 
     <?php else: ?>
