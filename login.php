@@ -56,6 +56,5 @@ if (isset($passwordError)) {
 ?>
         </fieldset>
     </form>
-    <script src="loginPage.js"></script>
 </body>
 </html>
