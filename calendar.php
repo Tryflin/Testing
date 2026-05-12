@@ -103,7 +103,7 @@ require_once 'db.php';
             </section>
         </main>
         <!--Link to JavaScript-->
-        <<script>
+        <script>
     window.userID = <?php echo json_encode($_SESSION['userID'] ?? 0); ?>;
 
     console.log("Session userID:", window.userID);
