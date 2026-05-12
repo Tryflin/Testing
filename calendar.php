@@ -103,12 +103,12 @@ require_once 'db.php';
             </section>
         </main>
         <!--Link to JavaScript-->
-        <script>
-    window.userID = <?php echo json_encode($_SESSION['userID'] ?? null); ?>;
+        <<script>
+    window.userID = <?php echo json_encode($_SESSION['userID'] ?? 0); ?>;
 
-    console.log("Logged in as user:", window.userID);
+    console.log("Session userID:", window.userID);
 
-    if (!window.userID) {
+    if (!window.userID || window.userID === 0) {
         console.error("No logged in user found.");
     }
 </script>
