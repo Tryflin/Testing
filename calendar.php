@@ -82,7 +82,13 @@ require_once 'db.php';
                     <strong id="monthLabel"></strong>
 
                     <!--Goes to next month-->
-                    <button onclick="changeMonth(1)">→</button>
+                   <div class="calendar-controls">
+        <button onclick="changeMonth(1)">→</button>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+    </div>
                     
                 </section>
 
