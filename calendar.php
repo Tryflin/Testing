@@ -1,9 +1,10 @@
-<!--Author of Task Management System Calendar Page: Tristian Jurgens-->
+
 <?php
 session_start();
 
 require_once 'db.php';
 ?>
+<!--Author of Task Management System Calendar Page: Tristian Jurgens-->
 <!DOCTYPE html>
 <html lang="en">
 
