@@ -178,33 +178,38 @@ function addTask()
     })
 
     .then(res => res.json())
-    .then(response => 
+    .then(response =>
+{
+    console.log(response);
+
+    if (!response.success)
     {
-        console.log(response);
+        console.error("Save failed:", response.error);
+        alert("Task failed to save.");
+        return;
+    }
 
-        if (!tasks[selected]) tasks[selected] = [];
+    if (!tasks[selected])
+    {
+        tasks[selected] = [];
+    }
 
-        //This adds the new task//
-        tasks[selected].push(
-        {
-            title,
-            desc,
-            priority,
-            status,
-            reminder
-        });
+    tasks[selected].push(
+    {
+        id: response.id,
+        title,
+        desc,
+        priority,
+        status,
+        reminder
+    });
 
-        //it just an easy way to clear the input fields//
-        document.getElementById("taskTitle").value = "";
-        document.getElementById("taskDesc").value = "";
+    document.getElementById("taskTitle").value = "";
+    document.getElementById("taskDesc").value = "";
 
-        //refreshes the UI to reflect the tasks added//
-        renderTasks();
-        generateCalendar();
-    })
-    //error finding//
-    .catch(err => console.error(err));
-}
+    renderTasks();
+    generateCalendar();
+})
 
 //This is to delete tasks from the backend, no longer the just the frontend//
 //changed and deleted the original, changed for id//
